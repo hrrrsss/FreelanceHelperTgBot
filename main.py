@@ -7,8 +7,9 @@ from aiogram.enums import ParseMode
 from aiogram.fsm.storage.memory import MemoryStorage
 
 from config.config import load_config, Config
-from handlers import hd_q, hd_start
+from handlers import hd_q, hd_start, hd_basic
 from keyboards.menu_commands import set_main_menu
+
 
 
 logger = logging.getLogger(__name__)
@@ -31,6 +32,7 @@ async def main():
     await set_main_menu(bot)
 
     dp.include_router(hd_start.start_router)
+    dp.include_router(hd_basic.basic_router)
     dp.include_router(hd_q.q_router)
 
     await bot.delete_webhook(drop_pending_updates=True)
