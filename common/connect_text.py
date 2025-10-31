@@ -6,3 +6,5 @@ with open("json_files/text.json", "r", encoding="utf-8") as f:
 WELCOME_TEXT = texts["welcome"]
 MENU_TEXT = texts["commands"]
 ADMIN_ID = texts["admin_id"]
+PROFILE_TEXT = texts["profile"]
+TARIFS_TEXT = texts["tarifs"]
